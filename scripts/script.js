@@ -17,6 +17,7 @@ function myFunction() {
       item[i].style.display = "none";
     }
   }
+}
   // for (i = 0; i < item.length; i++) {
   //     // a = item[i].getElementsByTagName("a")[0];
   //     if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
@@ -24,8 +25,8 @@ function myFunction() {
   //     } else {
   //         item[i].style.display = "none";
   //     }
-}
-}
+// }
+// }
 
 
 
