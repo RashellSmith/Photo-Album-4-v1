@@ -1,20 +1,19 @@
-body {
-    padding: 50px;
-    overflow: auto;
-}
+
 input{
   display:block;
   margin: auto;
-  width:20%;
+  width:50%;
   height: 2em;
 }
+
 .figures{
-  margin: 20px 100px;
+  width:360px;
+  margin: 10px 10px;
 }
 .figures div {
     display: inline-block;
-    width: 20%;
-    margin: 30px;
+    width: 25%;
+     margin: 8px;
     vertical-align: top;
     padding-left: 0;
     padding-right: 0;
@@ -23,6 +22,133 @@ input{
    width:100%;
    height:100%;
   }
-  figcaption{
-    display: none;
+
+/* polaroid style */
+div.item a:after {
+  content: attr(title);
+}
+.figures div {
+    display: inline-block;
+    width: 25%;
+    border-style: solid;
+    border-width: thin;
+    border-color: black;
+    margin: 10px;
+    margin-bottom: 12px;
+    vertical-align: top;
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 25px;
+
   }
+  /* By default, we tilt all our images -2 degrees */
+div {
+  transform: rotate(-2deg);
+}
+/* Rotate all even images 2 degrees */
+div :nth-child(even) {
+transform: rotate(-2deg);
+  -moz-transform: rotate(2deg);
+}
+
+/* Don't rotate every third image, but offset its position */
+ div:nth-child(3n)  {
+transform: none;
+  -moz-transform: none;
+  position: relative;
+  top: -5px;
+}
+
+/* Rotate every fifth image by 5 degrees and offset it */
+ div:nth-child(5n) {
+transform: rotate(5deg);
+  -moz-transform: rotate(5deg);
+  position: relative;
+  right: 5px;
+}
+
+/* Keep default rotate for every eighth, but offset it */
+div:nth-child(8n)  {
+  position: relative;
+  top: 8px;
+  right: 5px;
+}
+
+/* Keep default rotate for every eleventh, but offset it */
+ div:nth-child(11n)  {
+  position: relative;
+  top: 3px;
+  left: -5px;
+}
+/* Scale the images on hover, add transitions for smoothing things out, and ensure the hover appears on top */
+div :hover {
+  transform: scale(1.25);
+  -moz-transform: scale(1.25);
+  position: relative;
+  z-index: 5;
+}
+a :hover {
+  transform: none;
+  -moz-transform: scale(1.25);
+  /* position: relative;
+  z-index: 5; */
+}
+a{
+  text-decoration-line: none;
+}
+.baguetteBoxOne{
+  transform: none;
+}
+/* @media only screen and (min-width: 350px){
+  body{
+    background-color: yellow;
+  }
+  input{
+    display:block;
+    margin: auto;
+    width:50%;
+    height: 2em;
+  }
+  .figures{
+    max-width:500px;
+    margin: auto;
+  }
+  .figures div {
+      display: inline-block;
+      width: 40%;
+      margin: 8px;
+      vertical-align: top;
+      padding-left: 0;
+      padding-right: 0;
+    }
+   img {
+     width:100%;
+     height:100%;
+    }
+}
+@media only screen and (min-width: 768px) {
+
+  input{
+    display:block;
+    margin: auto;
+    width:20%;
+    height: 2em;
+  }
+  .figures{
+    width: auto;
+    margin: 20px 100px;
+  }
+  .figures div {
+      display: inline-block;
+      width: 20%;
+      margin: 30px;
+      vertical-align: top;
+      padding-left: 0;
+      padding-right: 0;
+    }
+   img {
+     width:100%;
+     height:100%;
+    }
+} */

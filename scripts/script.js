@@ -3,7 +3,7 @@ function myFunction() {
   var input, filter, a;
   input = document.getElementById('myInput');
   filter = input.value.toUpperCase();
-  var anchor = document.querySelectorAll('.gallery a');
+  var anchor = document.querySelectorAll('#list a');
 
 
   // Loop through all list items, and hide those who don't match the search query
