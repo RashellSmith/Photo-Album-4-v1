@@ -97,9 +97,7 @@ a :hover {
 a{
   text-decoration-line: none;
 }
-.baguetteBoxOne{
-  transform: none;
-}
+
 /* @media only screen and (min-width: 350px){
   body{
     background-color: yellow;
